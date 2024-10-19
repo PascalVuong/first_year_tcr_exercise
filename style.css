@@ -20,7 +20,7 @@ nav {
   display: flex;
   width: 100%;
   padding: 2rem;
-  min-height: 10vh;
+  height: 10vh;
   align-items: center;
   background: #00a8c7;
   justify-content: space-between;
@@ -35,6 +35,7 @@ nav ul {
 }
 nav li {
   font-size: 2.5rem;
+  position: relative;
   padding: 0 4rem;
 }
 nav a {
@@ -261,11 +262,13 @@ footer {
 }
 .dropdowncontent {
   display: none;
-  position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
 }
 .dropdowncontent a {
   color: black;
@@ -283,7 +286,9 @@ footer {
   background-color: #E9E9E9;
 }
 .dropdown:hover .dropdowncontent {
-  display: block;
+  display: flex;
+  transform: translateX(-14%);
+  align-items: center;
 }
 .dropdown:hover .dropknop {
   background-color: white;
